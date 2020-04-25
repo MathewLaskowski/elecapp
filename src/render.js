@@ -81,7 +81,9 @@ async function selectSource(source) {
       defaultPath: `vid-${Date.now()}.webm`
     })
 
-    console.log(filePath)
+    console.log(filePath);
+
+    writeFile(filePath, buffer, () => console.log('video saved successfully!'))
 
   }
 }
